@@ -1,3 +1,3 @@
 == README
 
-This project is a Blogging CMS with simple features to help me practice Ruby on Rails and to perhaps let me use it as my blogging platform in the future (currently loving Medium though).
+This project is a Blogging CMS with simple features to help me practice Ruby on Rails and to perhaps let me use it as my blogging platform (current one can be found at medium.com/@christianmackm) in the future.
