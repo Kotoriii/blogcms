@@ -19,10 +19,20 @@ class ArticlesController < ApplicationController
 		#fail halt request to examine parameters
 	end
 
+	def edit
+		@article = Article.find(params[:id])
+	end
+
+	def update
+		@article = Article.find(params[:id])
+		@article.update(article_params)
+		redirect_to article_path(@article)
+	end
+
 	def destroy
 		@article = Article.destroy(params[:id])
 		redirect_to articles_path
 	end	
 end
 
-#Creating an Edit Action & View
+#Adding a flash message
