@@ -43,4 +43,4 @@ class ArticlesController < ApplicationController
 	end	
 end
 
-#Adding a flash message
+#Displaying Comments for an Article
