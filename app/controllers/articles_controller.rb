@@ -6,10 +6,12 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@comment = Comment.new
+		@comment.article_id = @article.id
 	end
 
 	def new
-		@article = Article.new
+		@article = Article.new #Blank article object so Rails figures out fields
 	end
 
 	def create
@@ -43,4 +45,4 @@ class ArticlesController < ApplicationController
 	end	
 end
 
-#Displaying Comments for an Article
+#l3: Tagging
