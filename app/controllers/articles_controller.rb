@@ -1,14 +1,12 @@
 class ArticlesController < ApplicationController
+	before_action :set_article, only: [:show, :edit, :update, :destroy]
 	before_filter :require_login, except: [:index, :show]
+	respond_to :json, :html
 	include ArticlesHelper
 	def index
 		@articles = Article.all
-	end
-
-	def show
-		@article = Article.find(params[:id])
-		@comment = Comment.new
-		@comment.article_id = @article.id
+		@comments = @article.comments.order("created_at DESC")
+		respond_with @articles
 	end
 
 	def new
@@ -44,4 +42,8 @@ class ArticlesController < ApplicationController
 
 		redirect_to articles_path
 	end	
+
+	def set_article
+      @article = Article.find(params[:id])
+    end
 end
