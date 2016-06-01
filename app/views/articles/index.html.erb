@@ -1,13 +1,13 @@
-<div class="container">
 <h1>All Articles </h1>
 
-<ul id="articles">
 	<% @articles.each do |article| %>
-	<li>
-	<%= link_to article.title, article_path(article), class: 'article_title' %>
-	</li>
+	<div class="artcontainer">
+	<h3><%= article.title %></h3>
+	<%= truncate article.body, length: 255 %>
+	<br />
+	<%= link_to "Read more", article_path(article) %>
+	</div>
 	<% end %>
-</ul>
 <% if logged_in? %>
 <%= link_to "Create a New Article", new_article_path, class: "new_article" %> <br />
 <% end %>
