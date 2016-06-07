@@ -3,7 +3,7 @@
 	<% @articles.each do |article| %>
 	<div class="artcontainer">
 	<h3><%= article.title %></h3>
-	<%= truncate article.body, length: 255 %>
+	<p><%= truncate article.body, length: 255 %></p>
 	<br />
 	<%= link_to "Read more", article_path(article) %>
 	</div>
