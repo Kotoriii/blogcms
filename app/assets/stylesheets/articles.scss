@@ -5,10 +5,19 @@
 //Variables
 
 
+html, body, .wrapper, .page-content-wrapper{
+	height: 100%;
+}
+
+.page-content-wrapper{
+	background: #e6e6e6;
+}
 
 .artcontainer{
 	width: 100%;
-	max-width: 1000px;
+	max-width: 780px;
+	background: #fff;
+	border-top: 1.5px solid #cc2900;
 		}
 
 .artcontainer{
