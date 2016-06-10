@@ -4,16 +4,22 @@
 
 //Variables
 
+$greybackground: #e6e6e6;
 
 html, body, .wrapper, .page-content-wrapper{
 	height: 100%;
 }
 
-.page-content-wrapper{
-	background: #e6e6e6;
+.titles{
+	text-align: center;
+}
+
+.page-content-wrapper, .wrapper{
+	background: $greybackground;
 }
 
 .artcontainer{
+	margin: 0 auto;
 	width: 100%;
 	max-width: 780px;
 	background: #fff;
