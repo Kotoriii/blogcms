@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blog</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -11,49 +13,42 @@
 		<section class="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand">
-					<a href="#">
-						Start Bootstrap
-					</a>
+					<%= link_to 'Bloggerino', articles_path %>
 				</li>
 				<li>
-					<a href="#">Dashboard</a>
+					<%= link_to 'Articles', articles_path %>
+				</li>
+				<% if logged_in? %>
+				<li>
+					<%= link_to 'Authors', authors_path %>
+				</li>
+				<% end %>
+				<li>
+					<%= link_to 'Tags', tags_path %>
+				</li>
+					<% if logged_in? %>
+				<li>
+						<span><%= "Logged in as #{current_user.email}" %></span>
 				</li>
 				<li>
-					<a href="#">Shortcuts</a>
-				</li>
+						<%= link_to "Log Out", logout_path %>
+				</li>		
+					<% else %>
 				<li>
-					<a href="#">Overview</a>
+						<%= link_to "Log In", login_path %>
 				</li>
-				<li>
-					<a href="#">Events</a>
-				</li>
-				<li>
-					<a href="#">About</a>
-				</li>
-				<li>
-					<a href="#">Services</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
+				<% end %>
+
 			</ul>
 		</section>
 		<section class="page-content-wrapper">
-		<button class="btn btn-default" id="menu-toggle">Toggle Menu</button>
-		<span class="titles"><p class="flash"><%= flash.notice %></p></span>
+			<button class="btn btn-default" id="menu-toggle">Toggle Menu</button>
+			<span class="titles"><p class="flash"><%= flash.notice %></p></span>
 
-		<%= yield %>
-		<hr>
-      <h6>
-        <% if logged_in? %>
-          <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path %>
-        <% else %>
-          <%= link_to "(login)", login_path %>
-        <% end %>
-      </h6>
-      
-		
-	</section>
-</body>
-</html>
+			<%= yield %>
+				
+
+
+		</section>
+	</body>
+	</html>
