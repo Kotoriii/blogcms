@@ -6,24 +6,50 @@
 
 $greybackground: #e6e6e6;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 html, body, .wrapper, .page-content-wrapper{
 	height: 100%;
 }
 
-.titles{
-	text-align: center;
-}
-
-.page-content-wrapper, .wrapper{
+body {
 	background: $greybackground;
 }
 
-li + hr{
+//Button
+
+.button-menu {
+  @include border-radius(30px);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  background: #cc2900;
+  padding: 10px 20px 10px 20px;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+.button-menu:hover {
+  background: #b81212;
+  text-decoration: none;
+}
+
+.titles {
+	text-align: center;
+}
+
+li + hr {
 	margin: 10px 20px;
 	border-top: 1px solid #999;
 }
 
-.login-li{
+.login-li {
 	position: relative;
 }
 
@@ -31,17 +57,21 @@ li + hr{
 
 }
 
-.artcontainer{
-	margin: 0 auto;
+.artcontainer {
+	margin: 75px auto;
 	width: 100%;
 	max-width: 780px;
 	background: #fff;
 	border-top: 1.5px solid #cc2900;
-		}
+	padding: 30px;
+}
 
-.artcontainer{
-	p{
-		word-wrap: break-word;
-	}
+.artcontainer {
+	p { word-wrap: break-word; }
+	h2 { 
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 15px; 
+		}
 }
 
