@@ -5,6 +5,8 @@
 //Variables
 
 $greybackground: #e6e6e6;
+$buttonblue: #0c6bab;
+$artborder: 1.5px solid #cc2900;
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -57,21 +59,45 @@ li + hr {
 
 }
 
-.artcontainer {
-	margin: 75px auto;
+.newart {
+	position: relative;
+	top: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding-left: 5px;
+}
+
+.artcontainer, .newart { 
 	width: 100%;
 	max-width: 780px;
+}
+
+.newart a{
+	@extend .button-menu;
+	background: $buttonblue;
+}
+
+.artcontainer {
+	margin: 70px auto;
 	background: #fff;
-	border-top: 1.5px solid #cc2900;
+	border-top: $artborder;
 	padding: 30px;
 }
 
 .artcontainer {
-	p { word-wrap: break-word; }
+	p { 
+		word-wrap: break-word;
+		line-height: 24px; 
+	}
 	h2 { 
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 15px; 
-		}
+	}
+	.readmore {
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
