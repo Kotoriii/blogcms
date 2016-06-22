@@ -42,7 +42,12 @@
 			</ul>
 		</section>
 		<section class="page-content-wrapper">
+			<div id="sidebuttons">
 			<button class="button-menu" id="menu-toggle">Toggle Menu</button>
+			<% if logged_in? %>
+			<%= link_to "Create a New Article", new_article_path %>
+			<% end %>
+			</div>
 			<span class="titles"><p class="flash"><%= flash.notice %></p></span>
 
 			<%= yield %>

@@ -23,6 +23,11 @@ body {
 	background: $greybackground;
 }
 
+#sidebuttons{
+	display: inline-block;
+	width: 100%;
+}
+
 //Button
 
 .button-menu {
@@ -35,6 +40,7 @@ body {
   border: 0;
   text-decoration: none;
   outline: none;
+  display: inline-block;
 }
 
 .button-menu:hover {
@@ -55,27 +61,21 @@ li + hr {
 	position: relative;
 }
 
-.login-li + span{
-
-}
-
-.newart {
-	position: relative;
-	top: 45px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-	padding-left: 5px;
-}
-
 .artcontainer, .newart { 
 	width: 100%;
 	max-width: 780px;
 }
 
-.newart a{
+#sidebuttons a{
 	@extend .button-menu;
 	background: $buttonblue;
+	float: right;
+}
+
+.bottombuttons{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
 }
 
 .artcontainer {
@@ -99,5 +99,10 @@ li + hr {
 		text-align: center;
 		margin: 0 auto;
 	}
+
 }
+
+.customlinks{
+  	font-size: 1.25em;
+  }
 

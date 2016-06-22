@@ -1,15 +1,16 @@
 <span class="titles"><h1>All Articles </h1></span>
-	<% if logged_in? %>
-	<div class="newart"><%= link_to "Create a New Article", new_article_path %></div>
-	<% end %>
 	<% @articles.each do |article| %>
 	<article class="artcontainer">
 	<h2><%= article.title %></h2>
 	<p><%= truncate article.body, length: 255 %></p>
 	<br />
-	<div class="readmore"><%= link_to "Read more", article_path(article)%></div>
+	<div class="readmore"><%= link_to "Read more", article_path(article), class: "customlinks" %></div>
 	</article>
 	<% end %>
-<%= link_to "Browse by Tag", tags_path, class: "tags_link" %>
+	<div class="bottombuttons">
+	<% if @articles.count >= 1 %>
+	<%= link_to "Browse by Tag", tags_path, class: "customlinks" %>
+	<% end %>
+	</div>
 
 
