@@ -1,6 +1,12 @@
+<div id="sidebuttons">
+  <button class="button-menu" id="menu-toggle">Toggle Menu</button>
+  <% if logged_in? %>
+  <%= link_to "Create a New Article", new_article_path %>
+  <% end %>
+</div>
 <h1>Listing Authors</h1>
 
-<table>
+<table id="authors">
   <thead>
     <tr>
       <th>Username</th>
@@ -11,17 +17,17 @@
 
   <tbody>
     <% @authors.each do |author| %>
-      <tr>
-        <td><%= author.username %></td>
-        <td><%= author.email %></td>
-        <td><%= link_to 'Show', author %>
+    <tr>
+      <td><%= author.username %></td>
+      <td><%= author.email %></td>
+      <td><%= link_to 'Show', author %>
         <%= link_to 'Edit', edit_author_path(author) %>
         <%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Author', new_author_path %>
+  <%= link_to 'New Author', new_author_path %>

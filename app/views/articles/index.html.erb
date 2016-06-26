@@ -1,16 +1,22 @@
+<div id="sidebuttons">
+	<button class="button-menu" id="menu-toggle">Toggle Menu</button>
+	<% if logged_in? %>
+	<%= link_to "Create a New Article", new_article_path %>
+	<% end %>
+</div>
 <span class="titles"><h1>All Articles </h1></span>
-	<% @articles.each do |article| %>
-	<article class="artcontainer">
+<% @articles.each do |article| %>
+<article class="artcontainer">
 	<h2><%= article.title %></h2>
 	<p><%= truncate article.body, length: 255 %></p>
 	<br />
 	<div class="readmore"><%= link_to "Read more", article_path(article), class: "customlinks" %></div>
-	</article>
-	<% end %>
-	<div class="bottombuttons">
+</article>
+<% end %>
+<div class="bottombuttons">
 	<% if @articles.count >= 1 %>
 	<%= link_to "Browse by Tag", tags_path, class: "customlinks" %>
 	<% end %>
-	</div>
+</div>
 
 
