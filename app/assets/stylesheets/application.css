@@ -13,6 +13,4 @@
  *= require bootstrap.min
  *= require_self
  *= require simple-sidebar
- *= require articles
- *= require authors
  */
