@@ -1,4 +1,9 @@
-<h1>Login</h1>
+<div id="sidebuttons">
+  <button class="button-menu" id="menu-toggle">Toggle Menu</button>
+  <%= link_to 'New Author', new_author_path %>
+</div>
+
+<header><h1>Login</h1></header>
 
 <div class="logincontainer">
 <%= form_tag author_sessions_path, method: :post do %>
@@ -13,7 +18,7 @@
     <br/>
   </div>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <button class="button-login" name="commit">Toggle Menu</button>
   </div>
 <% end %>
 </div>

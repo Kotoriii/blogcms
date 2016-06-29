@@ -4,7 +4,9 @@
 	<%= link_to "Create a New Article", new_article_path %>
 	<% end %>
 </div>
-<span class="titles"><h1>All Articles </h1></span>
+
+<header><h1>All Articles </h1></header>
+
 <% @articles.each do |article| %>
 <article class="artcontainer">
 	<h2><%= article.title %></h2>

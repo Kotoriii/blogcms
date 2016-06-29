@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//Variables
+// Variables and mixins
 
 $greybackground: #e6e6e6;
 $buttonblue: #0c6bab;
@@ -15,6 +15,8 @@ $artborder: 1.5px solid #cc2900;
           border-radius: $radius;
 }
 
+// Miscellaneous
+
 html, body, .wrapper, .page-content-wrapper{
 	height: 100%;
 }
@@ -23,12 +25,7 @@ body {
 	background: $greybackground;
 }
 
-#sidebuttons{
-	display: inline-block;
-	width: 100%;
-}
-
-//Button
+// Buttons
 
 .button-menu {
   @include border-radius(30px);
@@ -48,7 +45,33 @@ body {
   text-decoration: none;
 }
 
-.titles {
+#sidebuttons {
+	display: inline-block;
+	width: 100%;
+}
+
+#sidebuttons a {
+	@extend .button-menu;
+	background: $buttonblue;
+	float: right;
+}
+
+.bottombuttons {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.button-login {
+	@extend .button-menu;
+	background: $buttonblue;
+	font-size: 12px;
+
+}
+
+// Headers and navbar
+
+header {
 	text-align: center;
 }
 
@@ -61,21 +84,11 @@ li + hr {
 	position: relative;
 }
 
+// Articles container
+
 .artcontainer, .newart { 
 	width: 100%;
 	max-width: 780px;
-}
-
-#sidebuttons a{
-	@extend .button-menu;
-	background: $buttonblue;
-	float: right;
-}
-
-.bottombuttons{
-	width: 100%;
-	text-align: center;
-	padding-bottom: 50px;
 }
 
 .artcontainer {
@@ -100,6 +113,15 @@ li + hr {
 		margin: 0 auto;
 	}
 
+}
+
+// Forms
+
+.field input {
+	@include border-radius(7.5px);
+	width: 200px;
+	height: 30px;
+	margin: 12.5px 0;
 }
 
 .customlinks{
