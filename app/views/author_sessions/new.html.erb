@@ -5,7 +5,7 @@
 
 <header><h1>Login</h1></header>
 
-<div class="logincontainer">
+<div class="formcontainer">
 <%= form_tag author_sessions_path, method: :post do %>
   <div class="field">
     <%= label_tag :email %>
@@ -18,9 +18,10 @@
     <br/>
   </div>
   <div class="actions">
-    <button class="button-login" name="commit">Toggle Menu</button>
+    <button class="button-login" name="commit">Log In</button>
   </div>
 <% end %>
 </div>
-
-<%= link_to 'Back', articles_path %>
+<div class="bottombuttons">
+<%= link_to 'Back to Homepage', articles_path, class: "customlinks" %>
+</div>
