@@ -1,3 +1,4 @@
+<div class="formcontainer">
 <%= form_for(@author) do |f| %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
@@ -12,22 +13,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br>
+    <%= f.label :username %>
     <%= f.text_field :username, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email %>
     <%= f.text_field :email, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password %>
     <%= f.password_field :password, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :password_confimation %><br>
+    <%= f.label :password_confimation %>
     <%= f.password_field :password_confirmation, :required => true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <button class="button-login" name="commit">Create Author</button>
   </div>
 <% end %>
+</div>

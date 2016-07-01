@@ -9,10 +9,10 @@ $buttonblue: #0c6bab;
 $artborder: 1.5px solid #cc2900;
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+  	-webkit-border-radius: $radius;
+     	moz-border-radius: $radius;
+      	-ms-border-radius: $radius;
+          	border-radius: $radius;
 }
 
 // Miscellaneous
@@ -28,21 +28,21 @@ body {
 // Buttons
 
 .button-menu {
-  @include border-radius(30px);
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 16px;
-  background: #cc2900;
-  padding: 10px 20px 10px 20px;
-  border: 0;
-  text-decoration: none;
-  outline: none;
-  display: inline-block;
+  	@include border-radius(30px);
+  	font-family: Arial;
+  	color: #ffffff;
+  	font-size: 16px;
+  	background: #cc2900;
+  	padding: 10px 20px 10px 20px;
+  	border: 0;
+  	text-decoration: none;
+  	outline: none;
+  	display: inline-block;
 }
 
 .button-menu:hover {
-  background: #b81212;
-  text-decoration: none;
+  	background: #b81212;
+  	text-decoration: none;
 }
 
 #sidebuttons {
