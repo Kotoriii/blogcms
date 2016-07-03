@@ -1,22 +1,24 @@
+<section class="formcontainer newarticle" role="">
 <%= form_for(@article) do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p>
-    <%= f.label :title %><br />
+  <div class="field">
+    <%= f.label :title %>
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
+  </div>
+  <div class="field">
+    <%= f.label :body %>
     <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :tag_list %><br />
+  </div>
+  <div class="field">
+    <%= f.label :tag_list %>
     <%= f.text_field :tag_list %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+  </div>
+  <div class="actions">
+    <button class="button-login" name="commit">Submit New Article</button>
+  </div>
 <% end %>
+</section>

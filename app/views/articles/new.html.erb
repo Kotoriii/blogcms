@@ -1,6 +1,10 @@
 <% if logged_in? %>
 
-<h1>Create a new article</h1>
+<div id="sidebuttons">
+  <button class="button-menu" id="menu-toggle">Toggle Menu</button>
+</div>
+
+<header><h1>Create a new article</h1></header>
 
 <%= render partial: 'form' %>
 

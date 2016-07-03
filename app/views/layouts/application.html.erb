@@ -10,7 +10,7 @@
 </head>
 <body>
 	<section class="wrapper">
-		<section class="sidebar-wrapper">
+		<nav class="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand">
 					<%= link_to 'Bloggerino', articles_path %>
@@ -40,7 +40,7 @@
 				</li>
 					<% end %>
 			</ul>
-		</section>
+		</nav>
 		<section class="page-content-wrapper">
 			<% if (flash.nil?) %><span class="titles"><p class="flash"><%= flash.notice %></p></span><% end %>
 

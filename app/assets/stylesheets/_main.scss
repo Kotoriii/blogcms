@@ -6,6 +6,7 @@
 
 $greybackground: #e6e6e6;
 $buttonblue: #0c6bab;
+$buttonred: #cc2900;
 $artborder: 1.5px solid #cc2900;
 
 @mixin border-radius($radius) {
@@ -32,7 +33,7 @@ body {
   	font-family: Arial;
   	color: #ffffff;
   	font-size: 16px;
-  	background: #cc2900;
+  	background: $buttonred;
   	padding: 10px 20px 10px 20px;
   	border: 0;
   	text-decoration: none;
@@ -81,7 +82,7 @@ li + hr {
 }
 
 .login-li {
-	position: relative;
+	color: $buttonred;
 }
 
 // Articles container
@@ -117,11 +118,24 @@ li + hr {
 
 // Forms
 
-.field input {
+.field input, .field textarea {
 	@include border-radius(7.5px);
 	width: 200px;
 	height: 30px;
 	margin: 12.5px 0;
+	outline: none;
+}
+
+.newarticle{
+	.field input, .field textarea{
+	width: 100%;
+	max-width: 650px;
+	min-width: 325px;
+	margin: 12.5px 0;
+	}
+	.field textarea{
+		height: 350px;
+	}
 }
 
 .customlinks{
