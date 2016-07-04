@@ -57,10 +57,14 @@ body {
 	float: right;
 }
 
-.bottombuttons {
+.browsebytag {
 	width: 100%;
 	text-align: center;
 	padding-bottom: 50px;
+}
+
+.actions {
+	margin-top: 40px;
 }
 
 .button-login {
@@ -68,6 +72,10 @@ body {
 	background: $buttonblue;
 	font-size: 12px;
 
+}
+
+.bottombuttons {
+	text-align: center;
 }
 
 // Headers and navbar
@@ -114,6 +122,25 @@ li + hr {
 		margin: 0 auto;
 	}
 
+}
+
+// Tags Container
+
+.tagscontainer {
+	@extend .artcontainer;
+	max-width: 400px;
+	text-align: center;
+}
+
+.tagscontainer {
+	ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+	}
+
+	li {
+		padding: 2.5px;
+	}
 }
 
 // Forms

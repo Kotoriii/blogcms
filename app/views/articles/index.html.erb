@@ -1,9 +1,9 @@
-<div id="sidebuttons">
+<section id="sidebuttons">
 	<button class="button-menu" id="menu-toggle">Toggle Menu</button>
 	<% if logged_in? %>
 	<%= link_to "Create a New Article", new_article_path %>
 	<% end %>
-</div>
+</section>
 
 <header><h1>All Articles </h1></header>
 
@@ -15,10 +15,10 @@
 	<div class="readmore"><%= link_to "Read more", article_path(article), class: "customlinks" %></div>
 </article>
 <% end %>
-<div class="bottombuttons">
+<section class="browsebytag">
 	<% if @articles.count >= 1 %>
 	<%= link_to "Browse by Tag", tags_path, class: "customlinks" %>
 	<% end %>
-</div>
+</section>
 
 

@@ -1,6 +1,10 @@
-<div class="container">
-<h1>All Tags</h1>
+<section id="sidebuttons">
+	<button class="button-menu" id="menu-toggle">Toggle Menu</button>
+</section>
 
+<header><h1>All Tags</h1></header>
+
+<section class="tagscontainer">
 <ul id="tags">
 	<% @tags.each do |tag| %>
 	<li>
@@ -8,6 +12,8 @@
 	</li>
 	<% end %>
 </ul>
+</section>
 
-<%= link_to "<< Back to Homepage", articles_path %>
-</div>
+<section class="bottombuttons">
+<%= link_to "Back to Homepage", articles_path, class: "customlinks" %>
+</section>
