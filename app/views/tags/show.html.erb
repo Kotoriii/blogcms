@@ -1,13 +1,20 @@
-<h1>Articles Tagged with <%= @tag.name %></h1>
+<section id="sidebuttons">
+	<button class="button-menu" id="menu-toggle">Toggle Menu</button>
+</section>
+<header><h1>Articles Tagged with <%= @tag.name %></h1></header>
 
-<ul>
-  <% @tag.articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
-  <% end %>
-</ul>
-
-<% if logged_in? %>
-<%= link_to "Delete", tag_path(@tag), method: :delete, data: {confirm: "Are you sure?"} %><br />
+<% @tag.articles.each do |article| %>
+<article class="artcontainer">
+	<h2><%= article.title %></h2>
+	<p><%= truncate article.body, length: 255 %></p>
+	<br />
+	<div class="readmore"><%= link_to "Read more", article_path(article), class: "customlinks" %></div>
+</article>
 <% end %>
 
-<%= link_to "Back to all Tags", tags_path, class: "tags_link" %>
+<section class="bottombuttons">
+<% if logged_in? %>
+	<%= link_to "Delete this Tag", tag_path(@tag), method: :delete, data: {confirm: "Are you sure?"}, class: "customlinks" %>
+<% end %>
+<%= link_to "Back to all Tags", tags_path, class: "customlinks" %>
+</section>
