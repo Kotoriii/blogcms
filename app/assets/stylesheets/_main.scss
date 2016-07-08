@@ -154,14 +154,20 @@ li + hr {
 }
 
 .newarticle{
-	.field input, .field textarea{
+	.field input, .field textarea {
 	width: 100%;
 	max-width: 650px;
 	min-width: 325px;
 	margin: 12.5px 0;
+	border: 1px rgb(200, 200, 200) solid;
 	}
-	.field textarea{
-		height: 350px;
+
+	.field textarea {
+	height: 350px;
+	}
+
+    .field #comment_body {
+	height: 125px;
 	}
 }
 

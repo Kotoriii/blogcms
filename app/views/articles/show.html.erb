@@ -1,4 +1,13 @@
-<h1><%= @article.title %></h1>
+<section id="sidebuttons">
+	<button class="button-menu" id="menu-toggle">Toggle Menu</button>
+	<% if logged_in? %>
+	<%= link_to "Create a New Article", new_article_path %>
+	<% end %>
+</section>
+
+<header><h1><%= @article.title %></h1></header>
+
+<article class="artcontainer">
 <p><%= @article.body %></p>
 <p>
   Tags:
@@ -14,3 +23,4 @@
 <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
 
 <%= link_to "<< Back to Articles List", articles_path %>
+</article>
