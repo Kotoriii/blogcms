@@ -29,7 +29,7 @@
 					<% if logged_in? %>
 				<hr>	
 				<li class="login-li">
-						<span><%= truncate "Logged in as #{current_user.email}", length: 20 %></span>
+						<span><%= truncate "Logged in as #{current_user.email}", length: 35 %></span>
 				</li>
 				<li>
 						<%= link_to "Log Out", logout_path %>
